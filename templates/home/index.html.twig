@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	test
+{% endblock %}
+
+
+{% block body %}
+	<br>
+	<div class="px-4 pt-5 my-5 text-center border-bottom bg-dark text-white">
+		<h1 class="display-4 fw-bold">Bienvenue sur GenPort</h1>
+		<div class="col-lg-6 mx-auto">
+			<p class="lead mb-4">votre passerelle vers des portfolios exceptionnels. Donnez vie à votre histoire professionnelle avec élégance et simplicité. Créez un portfolio qui vous représente authentiquement et ouvrez la porte à de nouvelles opportunités. Prêt à faire briller votre parcours professionnel?</p>
+			<div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+				<a type="button" class="btn btn-secondary btn-lg px-4 me-sm-3 personnaliser" href="{{ path('app_register') }}">Commencer maintenant</a>
+			</div>
+		</div>
+		<div class="overflow-hidden" style="max-height: 30vh;">
+			<div class="container px-5">
+				<img src="https://esdima.com/wp-content/uploads/2018/09/7.-consejos-para-hacer-un-portfolio.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+			</div>
+		</div>
+	</div>
+
+
+	<br><br>
+	<div class="container col-xxl-8 px-4 py-5 bg-dark text-white">
+		<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+			<div class="col-10 col-sm-8 col-lg-6">
+				<img src="https://img.freepik.com/vecteurs-libre/modele-portefeuille-couleur-design-plat_23-2149215470.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703808000&semt=sph" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+			</div>
+			<div class="col-lg-6">
+				<h1 class="display-5 fw-bold lh-1 mb-3">Créer votre portfolio en seulement quelque clique</h1>
+				<p class="lead">Personaliser votre portfolio en votre guise et obtener le le format PDF ou html apres remplissage de vos données</p>
+				<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+					<a type="button" class="btn btn-secondary btn-lg px-4 me-md-2 personnaliser" href="{{ path('app_register') }}">Commencer</a>
+					<button type="button" class="btn btn-outline-secondary btn-lg px-4">Voir plus</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+
+
+	<section class="py-5 text-center container">
+		<div class="row py-lg-5">
+			<div class="col-lg-6 col-md-8 mx-auto">
+				<h1 class="fw-light" id="produit">Nos produits</h1>
+				<p class="lead text-muted">Voici quelque exemple de portfolio créer avec cet outils.</p>
+
+			</div>
+		</div>
+	</section>
+
+	<div class="album py-5 bg-light">
+		<div class="container">
+
+			<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-2">
+				<div class="col">
+					<div class="card shadow-sm">
+						<img src="https://graphiste.com/blog/wp-content/uploads/sites/4/2023/10/portfolio-exemple-pdf-scaled.jpg" alt="" srcset="">
+						<div class="card-body">
+							<p class="card-text">exemple 1</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">Voir</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<img src="https://s.tmimgcdn.com/scr/1200x750/352500/disposition-du-modele-de-presentation-de-portfolio-numerique_352559-original.jpg" alt="" srcset="">
+
+						<div class="card-body">
+							<p class="card-text">exemple 2</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">Voir</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card shadow-sm">
+						<img src="https://www.datocms-assets.com/54769/1668067281-unnamed-2.png?auto=format&w=512" alt="" srcset="">
+						<div class="card-body">
+							<p class="card-text">exemple 3</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-outline-secondary">Voir</button>
+								</div>
+								<small class="text-muted">9 mins</small>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,65 @@
+<header class="p-3 bg-dark text-white">
+	<div class="container-fluid">
+		<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+			<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 px-2 text-white text-decoration-none">
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-braces" viewbox="0 0 16 16">
+					<path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"/>
+				</svg>
+			</a>
+
+			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+				<li>
+					<p class="nav-link px-2 text-secondary"></p>
+				</li>
+				{% if app.user %}
+					<li>
+						<a href="{{ path('app_home') }}" class="nav-link px-2 text-white styless">{{app.user.pseudo}}</a>
+					</li>
+				{% else %}
+					<li>
+						<a href="{{ path('app_home') }}" class="nav-link px-2 text-white styless">Accueil</a>
+					</li>
+					<li>
+						<a href="#produit" class="nav-link px-2 text-white styless scrollto active">Nos produits</a>
+					</li>
+					<li>
+						<a href="#foot" class="nav-link px-2 text-white styless">A propos</a>
+					</li>
+				{% endif %}
+			</ul>
+
+
+			<div class="text-end">
+				{% if app.user %}
+
+					<div class="btn-group">
+						<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewbox="0 0 16 16">
+								<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+							</svg>
+						</button>
+						<ul class="dropdown-menu">
+							<li>
+								<a class="dropdown-item" href="#">mon compte</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">mes portfolio</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li>
+								<a class="dropdown-item" href="{{ path('app_logout') }}">se déconnecter</a>
+							</li>
+						</ul>
+					</div>
+				{% else %}
+					<a type="button" class="btn btn-light btnPerso px-3" href="{{ path('app_login') }}">
+						Se Connecter
+					</a>
+					<a type="button" class="btn btn-outline-light btnPerso " href="{{ path('app_register') }}">
+						S'inscrire
+					</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</header>
