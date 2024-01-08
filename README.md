@@ -1,0 +1,2 @@
+PROJECT GENPORT
+GENPORT est bien plus qu'une simple plateforme web : c'est une solution sophistiquée développée avec Symfony, visant à simplifier la création de portfolios dynamiques. Conçu pour répondre aux besoins des professionnels cherchant à mettre en avant leurs compétences et réalisations, GENPORT offre une interface conviviale et des fonctionnalités avancées pour générer des portfolios attractifs en un rien de temps.
